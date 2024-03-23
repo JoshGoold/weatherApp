@@ -1,0 +1,62 @@
+html{
+    background-color: hsla(0, 0%, 80%, 0.548);
+}
+.weatherForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.weatherForm input{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+.weatherForm button{
+    font-size: 20px;
+    padding: 5px;
+    background-color: lightgreen;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+.card{
+    font-family: 'Courier New', Courier, monospace;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(39, 0, 39);
+    color: white;
+}
+.card .cityDisplay{
+    font-size: 2.5em;
+}
+.card .tempDisplay{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.card .humidityDisplay{
+    font-size: 1.125em;
+    font-weight: 600;
+}
+.card .descDisplay{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.card .weatherEmoji{
+    font-size: 4em;
+    font-weight: 600;
+    margin: 0;
+}
+.card .errorDisplay{
+    font-size: 1.5em;
+    font-weight: 600;
+}
