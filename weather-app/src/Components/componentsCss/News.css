@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.news{
+    background-color: rgba(113, 16, 232, 0.757);
+    color: white;
+    font-family: Poppins;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+}
+.news h1{
+    font-weight: 200;
+    border-left: 2px solid white;
+    padding-left: 10px;
+}
+.container .nextfullmoon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+
+}
+.container .nextfullmoon img{
+    width: 100%;
+    opacity: 1;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+.news .btns{
+    display: flex;
+    justify-content: center;
+}
+.news .btns button{
+    font-family: Poppins;
+    font-size: 1.2em;
+    font-weight: 300;
+    background-color: transparent;
+    border: none;
+    color: white;
+    transition: 0.2s ease-in all;
+}
+.news .btns button:hover{
+    transform: translateY(-2px);
+}

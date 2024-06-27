@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html{
-    background-color: hsla(0, 0%, 80%, 0.548);
+    background-color: hsla(0, 0%, 20%, 0.548);
 }
 .weatherForm{
     display: flex;
@@ -14,49 +16,249 @@ html{
     padding: 5px;
     border-radius: 10px;
     border: none;
+    transition: 0.3s ease-in-out all;
+   
 }
 .weatherForm button{
     font-size: 20px;
     padding: 5px;
-    background-color: lightgreen;
-    color: white;
+    background-color: transparent;
+    color: black;
     font-weight: bold;
     border: none;
-    border-radius: 10px;
+    border-radius: 50%;
+    transition: 0.2s all ease-in;
+}
+.weatherForm button:hover{
+    color: white;
+    background-color: hsla(0, 0%, 0%, 0.644);
 }
 .card{
-    font-family: 'Courier New', Courier, monospace;
-    width: 50%;
+    font-family: Poppins;
+    width: 70%;
     margin: auto;
     display: flex;
     border-radius: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(39, 0, 39);
+    background-color: hsla(0, 0%, 100%, 0.791);
     color: white;
+    z-index: 1;
+    max-height: 500px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 .card .cityDisplay{
-    font-size: 2.5em;
+    font-size: 3em;
+    font-weight: 200;
+    color: blue;
+    padding-bottom: 10px;
+    border-bottom: 2px solid hsla(0, 0%, 30%, 0.281);
 }
 .card .tempDisplay{
-    font-size: 1.5em;
-    font-weight: 600;
+    margin: 0;
+    font-size: 3em;
+    font-weight: 400;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.74);
 }
 .card .humidityDisplay{
     font-size: 1.125em;
-    font-weight: 600;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.74);
 }
 .card .descDisplay{
-    font-size: 1.1em;
-    font-weight: 600;
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 200;
+    color: black;
 }
-.card .weatherEmoji{
-    font-size: 4em;
+.minicard .weatherEmoji{
+    font-size: 6.5em;
     font-weight: 600;
     margin: 0;
+    
 }
 .card .errorDisplay{
     font-size: 1.5em;
     font-weight: 600;
+}
+.body img{
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    height: 100vh;
+    z-index: 5;
+}
+.body .core{
+    margin: auto;
+    width: 60%;
+    padding: 20px;
+    border-radius: 30px ;
+
+}
+@keyframes fade{
+    from{
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.fade{
+    animation: fade 0.5s all ease-in-out;
+}
+.body .title{
+    position: absolute;
+    z-index: 1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    top: 5%;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.temp{
+    text-align: center;
+    color: white;
+    margin-top: 300px;
+    font-family: Poppins;
+    font-size: 2.5em;
+    font-weight: 200;
+    margin-bottom: -20px;
+    background-color: rgba(0, 0, 0, 0.209);
+}
+.card .lt{
+color: rgba(0, 0, 0, 0.616);
+font-size: 12px;
+}
+html{
+    background-image: url(./assets/default.jpeg);
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.card .sunriseset{
+    font-size: 1.3em;
+    color: black;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+.card .wind{
+    font-size: 1.5em;
+    color: rgb(93, 0, 255);
+    font-weight: 200;
+}
+.card button{
+    border-radius: 50%;
+    border: none;
+    background-color: lightgreen;
+    color: white;
+    margin-left: 2px;
+}
+.card button:hover{
+    background-color: hsl(120, 73%, 65%);
+}
+.sun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+.break{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+@keyframes slideDown{
+    from{
+        transform: translateY(300px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+.slideDown{
+    animation: slideDown 0.5s all ease-in;
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    
+}
+.slideInLeft{
+    animation: slideInLeft 0.5s ease-in;
+}
+.sunriseset b{
+    font-size: 10px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.387);
+}
+.minicard{
+    font-family: Poppins;
+    width: 33.5%;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 100%, 0.791);
+    color: rgb(106, 0, 255);
+    margin-top: -10px;
+    margin-bottom: -10px;
+    padding: 10px;
+    height: 200px;
+}
+.red{
+    color: rgb(255, 203, 71);
+    font-size: 2em;
+}
+.black{
+    margin-bottom: -10px;
+    color: rgb(142, 116, 3);
+    font-size: 2em;
+}
+.card .exit{
+    align-self: flex-start;
+    margin: 0;
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+.card .exit:hover{
+   transform: translateY(-3px);
+}
+.body ul{
+    display: flex;
+    gap: 10px;
+    float: right;
+    list-style: none;
+}
+.body ul li{
+    color: white;
+    background-color: rgba(110, 12, 185, 0.603);
+    border-radius: 10px;
+    border: none;
+    font-weight: 200;
+    font-size: 1.2em;
+    font-family: Poppins;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+}
+.body ul li:hover{
+    background-color: hsla(274, 88%, 29%, 0.603);
+    transform: scale(1.1);
 }
